@@ -59,9 +59,8 @@ export function CustomNode({ data }) {
           <SiGrapheneos />
         </label>
         <div className={`flex flex-col justify-center items-center gap-2 absolute -top-8 left-14 p-4 rounded-sm bg-slate-200 text-slate-700 border-[1px] border-slate-500 shadow-md transition-all ${showPopup ? 'block' : 'hidden'}`}
-          onMouseEnter={(e) => { e.stopPropagation() }}
-          onMouseLeave={(e) => { e.stopPropagation() }}
-          onMouseOver={(e) => { e.stopPropagation() }}
+          onMouseEnter={() => { setShowCancelBtn(false) }}
+          onMouseLeave={() => { setShowCancelBtn(false)  }}
         >
           <input type='text' placeholder='add a name' value={nodeName} onChange={(e) => setNodeName(e.target.value)} />
           <hr className='text-lg border-[1px] w-full  border-slate-500'></hr>
