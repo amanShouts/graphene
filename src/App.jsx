@@ -45,7 +45,7 @@ function App() {
     setNodes(prev => ([...prev, newNode]))
   }
 
-  console.log(nodes, " nodes", edges);
+  // console.log(nodes, " nodes", edges);
 
   const onNodesChange = useCallback(
     (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
