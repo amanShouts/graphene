@@ -13,9 +13,8 @@ export function CustomNode({ data }) {
   const [nodeName, setNodeName] = useState('');
   const [showNodename, setShowNodename] = useState(false);
 
-  const {nodes, edges, setNodes, setEdges}= useContext(NodeCtx);
+  const { nodes, edges, setNodes, setEdges } = useContext(NodeCtx);
 
-  console.log(nodes, edges, " from copntext");
   const handlePopup = () => {
     setShowPopup(true);
   }
@@ -33,19 +32,16 @@ export function CustomNode({ data }) {
   const handleCancel = (e) => {
     e.stopPropagation();
     setNodeName('');
+    setShowNodename(false)
     setShowPopup(false);
   }
 
   const handleNodeRemove = (e) => {
-    console.log("inside node removeeeeeeeeeeeeeeeeeeeee XXXXXXXXXXXXXXXXXXXXXXXXX")
     e.stopPropagation()
-    
     const id = data.label;
-    console.log(id , " iddddddd", nodes);
-    const updatedNodes =  nodes.filter((node) => {
+    const updatedNodes = nodes.filter((node) => {
       return node.id != id;
     })
-    console.log(updatedNodes , " updates nodes")
 
     setNodes(prev => updatedNodes)
   }
@@ -59,7 +55,7 @@ export function CustomNode({ data }) {
         onMouseEnter={() => setShowCancelBtn(true)}
         onMouseLeave={() => setShowCancelBtn(false)}
       >
-        <label htmlFor="text" > 
+        <label htmlFor="text" >
           <SiGrapheneos />
         </label>
         <div className={`flex flex-col justify-center items-center gap-2 absolute -top-8 left-14 p-4 rounded-sm bg-slate-200 text-slate-700 border-[1px] border-slate-500 shadow-md transition-all ${showPopup ? 'block' : 'hidden'}`}
