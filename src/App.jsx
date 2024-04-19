@@ -76,10 +76,10 @@ function App() {
 
             <div className='flex flex-col justify-center items-center gap-2 mt-8'>
               <div className='flex justify-center items-center gap-8 '>
-                <button className={`p-2 shadow-xl rounded-sm bg-slate-400 hover:bg-slate-500 transition-all duration-400 ${shape == CIRCLE ? 'bg-slate-500 scale-110 font-extrabold shadow-2xl shadow-slate-800/90' : '' } `}>
+                <button className={`p-2 shadow-xl rounded-sm bg-slate-400 hover:bg-slate-500 transition-all duration-400 ${shape == CIRCLE ? 'bg-slate-500 scale-110 font-extrabold shadow-sm shadow-slate-900/80' : 'shadow-inset' } `}>
                   <GiCircle onClick={() => setShape(CIRCLE)} className='text-md text-white' />
                 </button>
-                <button className={`p-[6px] shadow-xl rounded-sm bg-slate-400 transition-all duration-400 hover:bg-slate-500 ${shape == RECTANGLE ? 'bg-slate-500 scale-110 font-extrabold shadow-2xl shadow-slate-900/50' : '' } `}>
+                <button className={`p-[6px] shadow-xl rounded-sm bg-slate-400 transition-all duration-400 hover:bg-slate-500 ${shape == RECTANGLE ? 'bg-slate-500 scale-110 font-extrabold shadow-sm shadow-slate-900/90' : 'shadow-inset' } `}>
                   <PiRectangleLight onClick={() => setShape(RECTANGLE)} className='text-xl text-white' />
                 </button>
               </div>
