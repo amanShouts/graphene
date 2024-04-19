@@ -1,8 +1,15 @@
-# React + Vite
+# Graphene
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Assignment for interactly.video
 
-Currently, two official plugins are available:
+#### Features 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Add/Delete nodes 
+* Add/Delete Edges
+* Rename Nodes
+* Select Node shapes
+
+
+Used - react | reactFlow | reactIcons | contextApi | react-hot-toast
+
+Deployed Link - https://graphene-nine.vercel.app/
