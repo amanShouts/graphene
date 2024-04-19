@@ -10,6 +10,6 @@
 * Select Node shapes
 
 
-Used - react | reactFlow | reactIcons | contextApi | react-hot-toast
+Used - react | reactFlow | reactIcons | contextApi | react-hot-toast | tailwindCSS
 
 Deployed Link - https://graphene-nine.vercel.app/
