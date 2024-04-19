@@ -58,7 +58,7 @@ function App() {
   );
 
   const onConnect = useCallback(
-    (params) => { setEdges((eds) => addEdge({...params, type : 'customEdge'}, eds))},
+    (params) => { setEdges((eds) => addEdge({ ...params, type: 'customEdge' }, eds)) },
     [],
   );
 
@@ -76,11 +76,15 @@ function App() {
 
             <div className='flex flex-col justify-center items-center gap-2 mt-8'>
               <div className='flex justify-center items-center gap-8 '>
-                <button className={`p-2 rounded-sm bg-slate-400 hover:bg-slate-500 transition-all duration-400 ${shape == CIRCLE ? 'bg-slate-500 scale-110 font-extrabold shadow-md shadow-slate-800/30 ' : '' } `}>
-                  <GiCircle onClick={() => setShape(CIRCLE)} className='text-md text-white' />
+                <button className={`p-2 rounded-sm bg-slate-400 hover:bg-slate-500 transition-all duration-400 ${shape == CIRCLE ? 'bg-slate-500 scale-110 font-extrabold shadow-md shadow-slate-800/30 ' : ''} `}
+                  onClick={() => setShape(CIRCLE)}
+                >
+                  <GiCircle className='text-md text-white' />
                 </button>
-                <button className={`p-[6px] rounded-sm bg-slate-400 transition-all duration-400 hover:bg-slate-500 ${shape == RECTANGLE ? 'bg-slate-500 scale-110 font-extrabold shadow-md shadow-slate-800/30' : '' } `}>
-                  <PiRectangleLight onClick={() => setShape(RECTANGLE)} className='text-xl text-white' />
+                <button className={`p-[6px] rounded-sm bg-slate-400 transition-all duration-400 hover:bg-slate-500 ${shape == RECTANGLE ? 'bg-slate-500 scale-110 font-extrabold shadow-md shadow-slate-800/30' : ''} `}
+                  onClick={() => setShape(RECTANGLE)}
+                >
+                  <PiRectangleLight className='text-xl text-white' />
                 </button>
               </div>
               <hr className='w-full border-[1px] border-slate-200'></hr>
