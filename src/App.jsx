@@ -6,8 +6,9 @@ import { CustomNode } from './components/CustomNode';
 import { PiRectangleLight } from "react-icons/pi";
 import { GiCircle } from "react-icons/gi";
 import { Navbar } from './components/Navbar';
-import { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
 import CustomEdge from './components/CustomEdge';
+import { SiGrapheneos } from "react-icons/si";
 
 export const CIRCLE = 'CIRCLE';
 export const RECTANGLE = 'RECTANGLE';
@@ -42,7 +43,14 @@ function App() {
     };
 
     nodeId.current = nodeId.current + 1;
-    setNodes(prev => ([...prev, newNode]))
+    setNodes(prev => ([...prev, newNode]));
+    toast.custom((t) => {
+      return (<div className={`bg-green-300 absolute bottom-4 animate-appear-from-down flex justify-center items-center gap-2 px-4 py-2 rounded-md shadow-md shadow-slate-800/30`}>
+        <SiGrapheneos className='animate-spin' />
+        <span> Node created! </span>
+      </div>)
+    },
+    )
   }
 
   // console.log(nodes, " nodes", edges);
